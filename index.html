@@ -14,27 +14,29 @@ body {
   direction:rtl;
   text-align:center;
   color:white;
+  -webkit-text-size-adjust:100%;
 }
 
 .container {
-  width:90%;
-  max-width:450px;
+  width:100%;
+  max-width:420px;   /* ضبط موبايل */
   margin:0 auto;
-  padding-top:25px;
+  padding:18px 12px;
+  box-sizing:border-box;
 }
 
 .logo {
-  width:120px;
-  height:120px;
+  width:110px;
+  height:110px;
   border-radius:50%;
-  margin:0 auto 15px;
+  margin:0 auto 14px;
   display:block;
 }
 
 .desc {
   font-size:14px;
   line-height:1.5;
-  margin:10px 0 18px;
+  margin:8px 0 14px;
   opacity:0.95;
 }
 
@@ -44,24 +46,26 @@ body {
   justify-content:space-between;
   width:100%;
   background:#fff;
-  border-radius:10px;
-  padding:10px 14px;
+  border-radius:12px;
+  padding:10px 12px;
   margin:8px 0;
   text-decoration:none;
   color:#000;
   font-size:15px;
   font-weight:bold;
+  box-sizing:border-box;
 }
 
 .btn img {
   width:26px;
   height:26px;
-  border-radius:50%;
+  border-radius:6px;
 }
 
 .arrow {
   font-size:20px;
-  color:#d4af37; /* الذهبي */
+  color:#d4af37;
+  font-weight:bold;
 }
 
 .call-btn {
@@ -70,11 +74,12 @@ body {
   background:#d4af37;
   color:black;
   padding:12px;
-  border-radius:10px;
+  border-radius:12px;
   margin:8px 0;
   font-weight:bold;
   text-decoration:none;
   font-size:15px;
+  box-sizing:border-box;
 }
 </style>
 </head>
@@ -82,16 +87,13 @@ body {
 
 <div class="container">
 
-  <!-- اللوغو -->
   <img src="logo.png" class="logo">
 
-  <!-- الوصف -->
   <div class="desc">
     جميع خدمات الطباعة والتصوير والقرطاسية<br>
     وكل ما يحتاجه الطالب في مكان واحد
   </div>
 
-  <!-- الروابط -->
   <a href="https://www.instagram.com/photocopy.saman" class="btn" style="background:#E1306C;">
     <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
     <span>Instagram</span>
@@ -117,7 +119,7 @@ body {
   </a>
 
   <a href="viber://add?number=9647503251700" class="btn" style="background:#665CAC;">
-    <img src="https://cdn-icons-png.flaticon.com/512/3670/3670054.png">
+    <img src="https://cdn-icons-png.flaticon.com/512/3670/3670051.png">
     <span>Viber</span>
     <span class="arrow">›</span>
   </a>
@@ -128,7 +130,6 @@ body {
     <span class="arrow">›</span>
   </a>
 
-  <!-- الاتصال -->
   <a href="tel:+9647503251700" class="call-btn">اتصال 1</a>
   <a href="tel:+9647505282219" class="call-btn">اتصال 2</a>
 
