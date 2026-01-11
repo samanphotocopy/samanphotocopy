@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ar">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,14 +22,14 @@ body {
   width:90%;
   max-width:450px;
   margin:0 auto;
-  padding-top:25px;
+  padding-top:20px;
 }
 
 .logo {
   width:120px;
   height:120px;
   border-radius:50%;
-  margin:0 auto 15px;
+  margin:0 auto 18px;
 }
 
 .desc {
@@ -37,7 +37,7 @@ body {
   line-height:1.6;
   opacity:0.95;
   font-weight:600;
-  margin-bottom:16px;
+  margin-bottom:20px;
 }
 
 .btn {
@@ -82,36 +82,38 @@ body {
 
 .lang-screen {
   position:fixed;
-  top:0;left:0;right:0;bottom:0;
+  inset:0;
+  background:#000;
   display:flex;
   flex-direction:column;
   justify-content:center;
   align-items:center;
-  background:#000;
-  gap:15px;
+  gap:14px;
 }
 
 .lang-btn {
-  width:200px;
-  padding:12px;
+  width:220px;
+  padding:13px;
   font-size:18px;
-  font-weight:bold;
+  font-weight:700;
   background:#d4af37;
   border-radius:10px;
   color:black;
-  text-decoration:none;
   cursor:pointer;
+  border:none;
 }
 </style>
 </head>
 <body>
 
+<!-- شاشة اختيار اللغة -->
 <div class="lang-screen" id="langScreen">
-  <div class="lang-btn" onclick="setLang('ar')">🇸🇦 العربية</div>
-  <div class="lang-btn" onclick="setLang('ku')">🇹🇯 کوردی</div>
-  <div class="lang-btn" onclick="setLang('en')">🇬🇧 English</div>
+  <button class="lang-btn" onclick="setLang('ar')">🇸🇦 العربية</button>
+  <button class="lang-btn" onclick="setLang('ku')">🇹🇯 کوردی</button>
+  <button class="lang-btn" onclick="setLang('en')">🇬🇧 English</button>
 </div>
 
+<!-- المحتوى الرئيسي -->
 <div class="container" id="main" style="display:none">
 
   <img src="logo.png" class="logo">
@@ -148,7 +150,7 @@ body {
 </div>
 
 <script>
-const data={
+const data = {
   ar:{
     desc:"جميع خدمات الطباعة والتصوير والقرطاسية<br>وكل ما يحتاجه الطالب في مكان واحد",
     call1:"اتصال 1",
@@ -166,7 +168,6 @@ const data={
   }
 };
 
-function setLang(l){
+function setLang(lang){
   document.getElementById("langScreen").style.display="none";
-  document.getElementById("main").style.display="block";
   document.
