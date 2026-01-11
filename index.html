@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Photocopy Saman</title>
+<style>
+body {
+  margin:0;
+  padding:0;
+  background:#111;
+  color:white;
+  font-family:Arial, sans-serif;
+  text-align:center;
+}
+.container {
+  padding:20px;
+}
+.language-select button {
+  width:80%;
+  padding:12px;
+  margin:10px 0;
+  border:none;
+  border-radius:6px;
+  font-size:18px;
+  cursor:pointer;
+  background:#b60000;
+  color:white;
+}
+.link-btn, .call-btn {
+  display:block;
+  width:90%;
+  margin:10px auto;
+  padding:12px;
+  background:#222;
+  color:white;
+  border-radius:6px;
+  text-decoration:none;
+  font-size:17px;
+}
+.hidden {
+  display:none;
+}
+.logo {
+  margin-top:30px;
+  margin-bottom:20px;
+}
+.desc {
+  margin:15px 0 25px;
+  line-height:1.4;
+  font-size:15px;
+  opacity:0.95;
+}
+</style>
+</head>
+<body>
+
+<div id="languagePage" class="container">
+  <img src="logo.png" class="logo" width="120">
+  <div class="language-select">
+    <button onclick="setLang('kr')">کوردی</button>
+    <button onclick="setLang('ar')">عربي</button>
+    <button onclick="setLang('en')">English</button>
+  </div>
+</div>
+
+<div id="mainPage" class="container hidden">
+  <div id="desc" class="desc"></div>
+
+  <!-- LINKS -->
+  <a href="https://www.instagram.com/photocopy.saman" class="link-btn" target="_blank">Instagram</a>
+  <a href="https://www.facebook.com/share/1HMDQ5RQXj/?mibextid=wwXIfr" class="link-btn" target="_blank">Facebook</a>
+  <a href="https://snapchat.com/t/hPWNh0BY" class="link-btn" target="_blank">Snapchat</a>
+  <a href="https://t.me/photocopysaman" class="link-btn" target="_blank">Telegram</a>
+  <a href="viber://add?number=9647503251700" class="link-btn" target="_blank">Viber</a>
+  <a href="https://wa.me/message/UF3V6FBVRBAHI1" class="link-btn" target="_blank">WhatsApp</a>
+
+  <!-- CALL BUTTONS -->
+  <a id="call1" class="call-btn" href="#">Call 1</a>
+  <a id="call2" class="call-btn" href="#">Call 2</a>
+</div>
+
+<script>
+const descs = {
+  "ar": "جميع خدمات الطباعة والتصوير والقرطاسية والخدمات المكتبية في مكان واحد.",
+  "kr": "هەموو خزمەتگوزاری چاپ و کۆپی و نووسەوەرایەتی لە یەک شوێن.",
+  "en": "Complete printing, photocopy and stationery services in one place."
+};
+
+const calls = {
+  "ar": ["اتصال 1","اتصال 2"],
+  "kr": ["پەیوەندی 1","پەیوەندی 2"],
+  "en": ["Call 1","Call 2"]
+};
+
+function setLang(lang) {
+  document.getElementById("languagePage").classList.add("hidden");
+  document.getElementById("mainPage").classList.remove("hidden");
+  document.getElementById("desc").innerText = descs[lang];
+  document.getElementById("call1").innerText = "📞 " + calls[lang][0];
+  document.getElementById("call2").innerText = "📞 " + calls[lang][1];
+}
+
+// أرقام الاتصال
+document.getElementById("call1").href = "tel:+9647503251700";
+document.getElementById("call2").href = "tel:+9647505282219";
+</script>
+
+</body>
+</html>
