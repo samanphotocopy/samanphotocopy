@@ -19,7 +19,7 @@ body {
 
 .container {
   width:100%;
-  max-width:420px;   /* ضبط موبايل */
+  max-width:420px;
   margin:0 auto;
   padding:18px 12px;
   box-sizing:border-box;
@@ -81,9 +81,29 @@ body {
   font-size:15px;
   box-sizing:border-box;
 }
+
+/* شاشة الترحيب */
+#welcomeScreen {
+  position:fixed;
+  inset:0;
+  background:black;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:26px;
+  font-weight:700;
+  color:#d4af37;
+  z-index:9999;
+  text-align:center;
+}
 </style>
 </head>
 <body>
+
+<!-- شاشة الترحيب -->
+<div id="welcomeScreen">
+  بەخێربێن بۆ ماڵپەڕی سەمان فوتۆکۆپی
+</div>
 
 <div class="container">
 
@@ -134,6 +154,12 @@ body {
   <a href="tel:+9647505282219" class="call-btn">اتصال 2</a>
 
 </div>
+
+<script>
+setTimeout(()=>{
+  document.getElementById("welcomeScreen").style.display="none";
+},1600);
+</script>
 
 </body>
 </html>
