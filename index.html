@@ -1,17 +1,19 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Saman Photocopy</title>
 
+<!-- خط فاخر -->
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+
 <style>
 body {
   margin:0;
   padding:0;
-  background:linear-gradient(to bottom right, #111, #2b2b2b, #d4af37);
-  font-family:Arial, sans-serif;
-  direction:rtl;
+  background:linear-gradient(to bottom right, #000, #111, #d4af37);
+  font-family:'Cairo', sans-serif;
   text-align:center;
   color:white;
 }
@@ -28,14 +30,14 @@ body {
   height:120px;
   border-radius:50%;
   margin:0 auto 15px;
-  display:block;
 }
 
 .desc {
-  font-size:14px;
-  line-height:1.5;
-  margin:10px 0 18px;
+  font-size:15px;
+  line-height:1.6;
   opacity:0.95;
+  font-weight:600;
+  margin-bottom:16px;
 }
 
 .btn {
@@ -44,95 +46,127 @@ body {
   justify-content:space-between;
   width:100%;
   background:#fff;
-  border-radius:10px;
-  padding:10px 14px;
-  margin:8px 0;
+  border-radius:12px;
+  padding:12px 16px;
+  margin:10px 0;
   text-decoration:none;
   color:#000;
-  font-size:15px;
-  font-weight:bold;
+  font-size:16px;
+  font-weight:700;
 }
 
 .btn img {
-  width:26px;
-  height:26px;
-  border-radius:50%;
+  width:28px;
+  height:28px;
+  border-radius:6px;
 }
 
 .arrow {
-  font-size:20px;
-  color:#d4af37; /* الذهبي */
+  font-size:22px;
+  color:#d4af37;
+  font-weight:bold;
 }
 
 .call-btn {
-  display:block;
   width:100%;
+  display:block;
   background:#d4af37;
   color:black;
-  padding:12px;
-  border-radius:10px;
+  padding:13px;
+  border-radius:12px;
   margin:8px 0;
-  font-weight:bold;
+  font-weight:700;
   text-decoration:none;
-  font-size:15px;
+  font-size:16px;
+}
+
+.lang-screen {
+  position:fixed;
+  top:0;left:0;right:0;bottom:0;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  background:#000;
+  gap:15px;
+}
+
+.lang-btn {
+  width:200px;
+  padding:12px;
+  font-size:18px;
+  font-weight:bold;
+  background:#d4af37;
+  border-radius:10px;
+  color:black;
+  text-decoration:none;
+  cursor:pointer;
 }
 </style>
 </head>
 <body>
 
-<div class="container">
+<div class="lang-screen" id="langScreen">
+  <div class="lang-btn" onclick="setLang('ar')">🇸🇦 العربية</div>
+  <div class="lang-btn" onclick="setLang('ku')">🇹🇯 کوردی</div>
+  <div class="lang-btn" onclick="setLang('en')">🇬🇧 English</div>
+</div>
 
-  <!-- اللوغو -->
+<div class="container" id="main" style="display:none">
+
   <img src="logo.png" class="logo">
 
-  <!-- الوصف -->
-  <div class="desc">
-    جميع خدمات الطباعة والتصوير والقرطاسية<br>
-    وكل ما يحتاجه الطالب في مكان واحد
-  </div>
+  <div class="desc" id="desc"></div>
 
-  <!-- الروابط -->
   <a href="https://www.instagram.com/photocopy.saman" class="btn" style="background:#E1306C;">
-    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
-    <span>Instagram</span>
-    <span class="arrow">›</span>
+    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"><span>Instagram</span><span class="arrow">›</span>
   </a>
 
   <a href="https://snapchat.com/t/hPWNh0BY" class="btn" style="background:#FFFC00;">
-    <img src="https://cdn-icons-png.flaticon.com/512/3670/3670154.png">
-    <span>Snapchat</span>
-    <span class="arrow">›</span>
+    <img src="https://cdn-icons-png.flaticon.com/512/3670/3670154.png"><span>Snapchat</span><span class="arrow">›</span>
   </a>
 
   <a href="https://t.me/photocopysaman" class="btn" style="background:#0088cc;">
-    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png">
-    <span>Telegram</span>
-    <span class="arrow">›</span>
+    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png"><span>Telegram</span><span class="arrow">›</span>
   </a>
 
   <a href="https://wa.me/message/UF3V6FBVRBAHI1" class="btn" style="background:#25D366;">
-    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
-    <span>WhatsApp</span>
-    <span class="arrow">›</span>
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png"><span>WhatsApp</span><span class="arrow">›</span>
   </a>
 
   <a href="viber://add?number=9647503251700" class="btn" style="background:#665CAC;">
-    <img src="https://cdn-icons-png.flaticon.com/512/3670/3670054.png">
-    <span>Viber</span>
-    <span class="arrow">›</span>
+    <img src="https://cdn-icons-png.flaticon.com/512/3670/3670051.png"><span>Viber</span><span class="arrow">›</span>
   </a>
 
   <a href="https://www.facebook.com/share/1HMDQ5RQXj/?mibextid=wwXIfr" class="btn" style="background:#1877F2;">
-    <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png">
-    <span>Facebook</span>
-    <span class="arrow">›</span>
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png"><span>Facebook</span><span class="arrow">›</span>
   </a>
 
-  <!-- الاتصال -->
-  <a href="tel:+9647503251700" class="call-btn">اتصال 1</a>
-  <a href="tel:+9647505282219" class="call-btn">اتصال 2</a>
+  <a id="call1" class="call-btn"></a>
+  <a id="call2" class="call-btn"></a>
 
 </div>
 
-</body>
-</html>
+<script>
+const data={
+  ar:{
+    desc:"جميع خدمات الطباعة والتصوير والقرطاسية<br>وكل ما يحتاجه الطالب في مكان واحد",
+    call1:"اتصال 1",
+    call2:"اتصال 2"
+  },
+  ku:{
+    desc:"هەموو خزمەتگوزاری چاپ و کتێبخانە<br>لە شوێنێکدا",
+    call1:"پەیوەندی ١",
+    call2:"پەیوەندی ٢"
+  },
+  en:{
+    desc:"Complete printing, photocopy and stationery services<br>All your academic needs in one place",
+    call1:"Call 1",
+    call2:"Call 2"
+  }
+};
+
+function setLang(l){
+  document.getElementById("langScreen").style.display="none";
+  document.getElementById("main").style.display="block";
+  document.
